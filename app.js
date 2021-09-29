@@ -29,6 +29,7 @@ async function selectCountries() {
 async function setInput() {
   try {
     if (baseSelect.value == toCurrencySelect.value) {
+      toCurrencyInput.value = baseInput.value;
       return;
     }
     const response = await fetch(
