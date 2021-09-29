@@ -14,17 +14,15 @@ async function selectCountries() {
   const rates = [data.base, ...Object.keys(data.rates)];
 
   rates.map((rate) => {
-    const option = document.createElement("option");
-    option.value = rate;
-    option.textContent = rate;
-    baseSelect.appendChild(option);
-  });
+    const baseOption = document.createElement("option");
+    baseOption.value = rate;
+    baseOption.textContent = rate;
+    baseSelect.appendChild(baseOption);
 
-  rates.map((rate) => {
-    const option = document.createElement("option");
-    option.value = rate;
-    option.textContent = rate;
-    toCurrencySelect.appendChild(option);
+    const toCurrencyOption = document.createElement("option");
+    toCurrencyOption.value = rate;
+    toCurrencyOption.textContent = rate;
+    toCurrencySelect.appendChild(toCurrencyOption);
   });
 }
 
