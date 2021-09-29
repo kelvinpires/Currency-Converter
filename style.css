@@ -2,3 +2,7 @@ h1 {
   color: white;
   text-shadow: 1px 0px 2px #1e1e26;
 }
+
+option {
+  background-color: #1e1e26;
+}
