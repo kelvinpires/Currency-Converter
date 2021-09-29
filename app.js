@@ -28,6 +28,9 @@ async function selectCountries() {
 
 async function setInput() {
   try {
+    if (baseSelect.value == toCurrencySelect.value) {
+      return;
+    }
     const response = await fetch(
       `https://api.frankfurter.app/latest?amount=${baseInput.value}&from=${baseSelect.value}&to=${toCurrencySelect.value}`
     );
